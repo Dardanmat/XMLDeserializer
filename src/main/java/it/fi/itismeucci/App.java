@@ -45,12 +45,15 @@ public class App
             e.printStackTrace();
         }
 
+        //stampo a schermo la richiesta dell'esercizio
         System.out.println("\n");
         System.out.println("La classe " + classe.getClasse() + " " + classe.getSpecializzazione() + " si trova nell'aula " + classe.getAula().getNome() + " ed è composta dai seguienti studenti:");
-        System.out.println();
-        System.out.println("\n");
+        for (Studente s : classe.getStudenti()) {
+            System.out.println("- " + s.getCognome());
+        }
 
         //Stampo i dati salvati
+        /*
         System.out.println("Anno di inizio: " + classe.getAnnoDiInizio());
         System.out.println("Aula:");
         System.out.println("    -Nome: " + classe.getAula().getNome());
@@ -63,6 +66,6 @@ public class App
             System.out.println("    [Nome]: " + s.getNome());
             System.out.println("    [Cognome]: " + s.getCognome() + "\n");
         }
-
+        */
     }
 }
